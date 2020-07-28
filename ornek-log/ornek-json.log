@@ -1,0 +1,4 @@
+{"@timestamp":"2020-07-09T09:57:19.469+03:00","@version":"1","message":"request1"}
+{"@timestamp":"2020-07-09T09:57:19.471+03:00","@version":"1","message":"request2"}
+{"@timestamp":"2020-07-09T09:57:19.472+03:00","@version":"1","message":"deneme"}
+{"@timestamp":"2020-07-09T09:57:19.472+03:00","@version":"1","message":"deneme123"}

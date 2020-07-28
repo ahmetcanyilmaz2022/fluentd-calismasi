@@ -1,0 +1,932 @@
+actions:
+###########################[Alias işleleri]###########################
+#################################################
+# Alias : app-last_week
+#################################################
+  1:
+    action: alias
+    description: >-
+      app- indeksleri için; Son 1 haftanın indexlerine 'app-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: app-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-backend-8d-last_week
+#################################################
+  2:
+    action: alias
+    description: >-
+      app-backend-8d-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-8d-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-backend-8d-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-8d-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-announcement-last_week
+#################################################
+  3:
+    action: alias
+    description: >-
+      app-announcement-* indeksleri için; Son 1 haftanın indexlerine 'app-announcement-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-announcement-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-announcement-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-batch-ops-last_week
+#################################################
+  4:
+    action: alias
+    description: >-
+      app-backend-batch-ops-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-batch-ops-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-batch-ops-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-backend-batch-ops-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-consumer-last_week
+#################################################
+  5:
+    action: alias
+    description: >-
+      app-backend-consumer-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-consumer-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-consumer-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-consumer-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-dogy-last_week
+#################################################
+  6:
+    action: alias
+    description: >-
+      app-dogy-* indeksleri için; Son 1 haftanın indexlerine 'app-dogy-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-dogy-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-dogy-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-dys-last_week
+#################################################
+  7:
+    action: alias
+    description: >-
+      app-dys-* indeksleri için; Son 1 haftanın indexlerine 'app-dys-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-dys-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-dys-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-ebsyssevk-last_week
+#################################################
+  8:
+    action: alias
+    description: >-
+      app-ebsyssevk-* indeksleri için; Son 1 haftanın indexlerine 'app-ebsyssevk-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-ebsyssevk-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-ebsyssevk-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : app-esso2-last_week
+#################################################
+  9:
+    action: alias
+    description: >-
+      app-esso2-* indeksleri için; Son 1 haftanın indexlerine 'app-esso2-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: app-esso2-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-esso2-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-idmail-last_week
+#################################################
+  10:
+    action: alias
+    description: >-
+      app-backend-idmail-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-idmail-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-idmail-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-idmail-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-kalite-tasarim-last_week
+#################################################
+  11:
+    action: alias
+    description: >-
+      app-backend-kalite-tasarim-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-kalite-tasarim-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-kalite-tasarim-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-kalite-tasarim-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-service-mail-last_week
+#################################################
+  12:
+    action: alias
+    description: >-
+      app-service-mail-* indeksleri için; Son 1 haftanın indexlerine 'app-service-mail-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-service-mail-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-service-mail-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-service-message-last_week
+#################################################
+  13:
+    action: alias
+    description: >-
+      app-service-message-* indeksleri için; Son 1 haftanın indexlerine 'app-service-message-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-service-message-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-service-message-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-proje_8D-last_week
+#################################################
+  14:
+    action: alias
+    description: >-
+      app-backend-proje_8D-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-proje_8D-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-proje_8D-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-proje_8D-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-push-notification-last_week
+#################################################
+  15:
+    action: alias
+    description: >-
+      app-push-notification-* indeksleri için; Son 1 haftanın indexlerine 'app-push-notification-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-push-notification-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-push-notification-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-service-sap-hr-last_week
+#################################################
+  16:
+    action: alias
+    description: >-
+      app-service-sap-hr-* indeksleri için; Son 1 haftanın indexlerine 'app-service-sap-hr-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-service-sap-hr-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-service-sap-hr-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-satis-last_week
+#################################################
+  17:
+    action: alias
+    description: >-
+      app-backend-satis-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-satis-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-satis-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-satis-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-sevkiyat-last_week
+#################################################
+  18:
+    action: alias
+    description: >-
+      app-backend-sevkiyat-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-sevkiyat-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-sevkiyat-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-sevkiyat-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-tstcert-last_week
+#################################################
+  19:
+    action: alias
+    description: >-
+      app-backend-tstcert-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-tstcert-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-tstcert-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-tstcert-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+#################################################
+# Alias : alias-app-backend-uys-last_week
+#################################################
+  20:
+    action: alias
+    description: >-
+      app-backend-uys-* indeksleri için; Son 1 haftanın indexlerine 'app-backend-uys-last_week' alias'ı ver,
+      bir önceki haftanın index alias'larını kaldır.
+    options:
+      name: alias-app-backend-uys-last_week
+      ignore_empty_list: True
+      warn_if_no_indices: False
+      disable_action: False
+    add:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-backend-uys-
+        exclude:
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -1
+        range_to: -1
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+    remove:
+      filters:
+      - filtertype: pattern
+        kind: prefix
+        value: app-
+      - filtertype: period
+        period_type: relative
+        source: name
+        range_from: -2
+        range_to: -2
+        timestring: '%Y.%m.%d'
+        unit: weeks
+        week_starts_on: sunday
+###########################[/Alias işleleri]###########################
+
+#################################################
+# Force Merge
+#################################################
+  21:
+    action: forcemerge
+    description: >-
+      app- indeksleri için; 2 günden eski indexleri forceMerge işlemi ile 
+      shard başına 2 segmente indirge.
+    options:
+      ignore_empty_list: True
+      max_num_segments: 2
+      delay: 120
+      timeout_override:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: app-
+      exclude:
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 2
+      exclude:
+    - filtertype: forcemerged
+      max_num_segments: 2
+      exclude:
+
+#################################################
+# Shard Allocation
+#################################################
+  22:
+    action: allocation
+    description: >-
+      app- indeksleri için; index_creation tarihine göre 3 günden eski
+      indekslerin shard allocation routing'ini 'require' 'tag=cold' yap.
+    options:
+      key: tag
+      value: cold
+      allocation_type: require
+      disable_action: True
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: app-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 3
+
+#################################################
+# İndeks Kapatma
+#################################################
+  23:
+    action: close
+    description: >-
+      app- önekine sahip indeksler için; 30 günden eski indeksleri
+      kapat.
+    options:
+      ignore_empty_list: True
+      delete_aliases: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: app-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 30
+
+#################################################
+# Yedekleme
+#################################################
+  24:
+    action: snapshot
+    description: >-
+      app- önekine sahip indeksler için; 45 günden daha eski indexlerin
+      snapshot'ını al
+    options:
+      repository: yedek
+      name: snapshot-%Y%m%d%H%M%S
+      ignore_unavailable: False
+      ignore_empty_list: True
+      include_global_state: True
+      continue_if_exception: False
+      partial: False
+      wait_for_completion: True
+      skip_repo_fs_check: False
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: app-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 45
+
+#################################################
+# İndeks Temizliği
+#################################################
+  25:
+    action: delete_indices
+    description: >-
+      app- önekine sahip indeksler için; 45 günden eski indeksleri sil.
+    options:
+      ignore_empty_list: True
+      disable_action: False
+    filters:
+    - filtertype: pattern
+      kind: prefix
+      value: app-
+    - filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days
+      unit_count: 45

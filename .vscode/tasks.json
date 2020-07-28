@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Temizlik - Elasticsearch Data",
+            "type": "shell",
+            "command": "./scripts/tasks/clean-elasticsearch-data.sh",
+            "group": "none",
+            "isBackground": true
+        },
+        {
+            "label": "Çalıştır - Docker - Elasticsearch",
+            "type": "shell",
+            "command": "./scripts/tasks/run-elasticsearch.sh",
+            "group": "none"
+        },
+        {
+            "label": "Çalıştır - Docker - Kibana",
+            "type": "shell",
+            "command": "./scripts/tasks/run-kibana.sh",
+            "group": "none"
+        },
+        {
+            "label": "Çalıştır - Docker - FluentD",
+            "type": "shell",
+            "command": "./scripts/tasks/run-fluentd.sh",
+            "group": "none"
+        }
+    ]
+}
